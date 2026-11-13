@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block body %}
+<div class="topbar">
+    <a class="brand" href="/dashboard">Lab<span>2</span></a>
+    <a class="btn btn--ghost" href="/logout">Выйти</a>
+</div>
+
+<main class="page">
+    <section class="card card--wide">
+        <h1>Привет, {{ username }}!</h1>
+        <p class="lead">Ты успешно авторизовался.</p>
+
+        <dl class="meta">
+            <dt>Логин</dt>
+            <dd>{{ username }}</dd>
+            <dt>ID</dt>
+            <dd>{{ user_id }}</dd>
+        </dl>
+
+        <div class="actions">
+            <a class="btn" href="/profile/{{ user_id }}">Мой профиль</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<div class="topbar">
+    <a class="brand" href="/">Lab<span>2</span></a>
+</div>
+
+<main class="page page--center">
+    <section class="card">
+        <h1>{{ title }}</h1>
+        <p class="message-text">{{ text }}</p>
+
+        <div class="actions">
+            <a class="btn" href="{{ back_url }}">{{ back_label }}</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

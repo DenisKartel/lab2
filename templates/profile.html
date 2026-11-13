@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block body %}
+<div class="topbar">
+    <a class="brand" href="/dashboard">Lab<span>2</span></a>
+</div>
+
+<main class="page">
+    <section class="card card--wide">
+        <h1>Профиль пользователя</h1>
+        <p class="lead">Публичные данные аккаунта.</p>
+
+        <dl class="meta">
+            <dt>ID</dt>
+            <dd>{{ user['id'] }}</dd>
+            <dt>Username</dt>
+            <dd>{{ user['username']|safe }}</dd>
+        </dl>
+
+        <div class="actions">
+            <a class="btn btn--ghost" href="/dashboard">Назад в кабинет</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

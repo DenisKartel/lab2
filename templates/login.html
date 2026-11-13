@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block body %}
+<div class="topbar">
+    <a class="brand" href="/">Lab<span>2</span></a>
+</div>
+
+<main class="page page--center">
+    <section class="card">
+        <h1>Вход в систему</h1>
+        <p class="lead">Введите логин и пароль, чтобы продолжить.</p>
+
+        <form method="POST">
+            <div>
+                <label for="username">Логин</label>
+                <input id="username" type="text" name="username"
+                       placeholder="Логин" autocomplete="username" required>
+            </div>
+
+            <div>
+                <label for="password">Пароль</label>
+                <input id="password" type="password" name="password"
+                       placeholder="Пароль" autocomplete="current-password" required>
+            </div>
+
+            <button class="btn btn--block" type="submit">Войти</button>
+        </form>
+
+        <p class="switch">
+            Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+        </p>
+    </section>
+</main>
+{% endblock %}
